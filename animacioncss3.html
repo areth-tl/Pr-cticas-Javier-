@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animacion CSS3</title>
+        <style>
+            @keyframes mover { 
+                0% {left: 0px; }
+                100% {left: 200px;}
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: relative;
+                animation: mover 2s infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Animacion con CSS3</h1>
+        <div class="box"></div>
+    </body>
+</html>

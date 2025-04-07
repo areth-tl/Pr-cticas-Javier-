@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sesion storage en HTML5</title>
+    </head>
+    <body>
+        <h1>Sesion de almacenamiento en HTML5</h1>
+        <button onclick="guardarSesion()">Guardar Sesion</button>
+        <button onclick="leerSesion()">Leer de Sesion</button>
+        <p id="sessionOutput"></p>
+        <script>
+            function guardarSesion(){
+                sessionStorage.setItem("sessionUser", "Esmeralda Pacheco");
+                alert("datos guardados en sesion");
+                }
+                function leerSesion(){
+                    var sessionUser=sessionStorage.getItem("sessionUser");
+                    document.getElementById("sessionOutput").innerHTML="Usuario en sesion:"+sessionUser;
+                    }
+        </script>
+    </body>
+</html>
