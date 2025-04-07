@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>geolocalizacion HTML5</title>
+    </head>
+    <body>
+        <h1>geolocalizacion en HTML5</h1>
+        <button onclick="getLocation() ">Obtener mi ubicacion</button>
+        <p id="location"></p>
+        <scrip>
+            funtion getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition (showPosition) ;
+                } else {
+                    document.getElementById ("location").innerHTML=
+                    "geolocalizacion no soportada por este navegador.";
+                }
+            }
+            function showPosition(position) {
+                document.getElementById("location").innerHTML="Latitud: " + 
+                position.coord.latitud +
+                "<br>Longitud: " + position.coords.longitude;
+            }
+        </scrip>
+    </body>
+</html>
